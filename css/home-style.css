@@ -1,0 +1,32 @@
+/* ===== HOME PAGE SPECIFIC STYLES ===== */
+/* This file contains styles specific to the homepage */
+
+/* ===== HERO SECTION - FULL HEIGHT FOR HOMEPAGE ===== */
+.hero {
+    min-height: 70vh !important; /* Full height for homepage - override compressed height */
+    padding: 0 !important; /* Remove padding to allow better centering */
+    display: flex !important;
+    align-items: center !important; /* Center vertically */
+    justify-content: center !important; /* Center horizontally */
+}
+
+/* ===== HOMEPAGE HERO ALIGNMENT ===== */
+.hero-content {
+    text-align: left !important; /* Left-align for homepage only */
+}
+
+/* ===== LARGER FONTS FOR HOMEPAGE HERO ===== */
+.hero-title {
+    font-size: 3.5rem !important; /* Slightly smaller title font */
+    margin-bottom: var(--spacing-1) !important; /* Much smaller spacing between titles */
+    line-height: 1.1 !important; /* Tighter line height */
+}
+
+/* Responsive font sizes for mobile */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.25rem !important;
+    }
+}
+
+/* All other hero styles are inherited from the main style.css */

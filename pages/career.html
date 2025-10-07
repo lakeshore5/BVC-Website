@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career - BVC</title>
+    <link rel="icon" type="image/png" href="../images/BVCLogoBull.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../shared/shared-elements.js"></script>
+</head>
+<body>
+    <!-- Navbar will be loaded here by shared-elements.js -->
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Join Our Team</h1>
+                <p class="hero-subtitle">Build your career with a leading consulting and asset management firm</p>
+            </div>
+        </section>
+
+        <!-- Career Application Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Interested in Part time work?<br>Have experience in marketing, sales or accounting?</h2>
+                
+                <div style="margin: 4rem 0;"></div>
+                
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <form 
+                      action="https://formsubmit.co/markusjseymour5@gmail.com" 
+                      method="POST" 
+                      enctype="multipart/form-data"
+                      style="font-family: Arial, sans-serif; font-size: 12pt; color: black;"
+                    >
+                      <!-- Hidden FormSubmit settings -->
+                      <input type="hidden" name="_subject" value="New Career Application - BVC">
+                      <input type="hidden" name="_next" value="https://bvc-website.com/pages/career.html">
+                      <input type="hidden" name="_captcha" value="false">
+
+                      <!-- First Name -->
+                      <div style="margin-bottom: 20px;">
+                        <label for="first_name"><b>First Name</b> <span style="color:red;">*</span></label><br>
+                        <input type="text" id="first_name" name="first_name" required 
+                          style="width:100%; padding:12px; font-size:12pt; border:1px solid #ccc; border-radius:4px; box-sizing: border-box;">
+                      </div>
+
+                      <!-- Email Address -->
+                      <div style="margin-bottom: 20px;">
+                        <label for="email"><b>Email Address</b> <span style="color:red;">*</span></label><br>
+                        <input type="email" id="email" name="email" required 
+                          style="width:100%; padding:12px; font-size:12pt; border:1px solid #ccc; border-radius:4px; box-sizing: border-box;">
+                      </div>
+
+                      <!-- Phone Number -->
+                      <div style="margin-bottom: 20px;">
+                        <label for="phone"><b>Phone Number</b></label><br>
+                        <input type="tel" id="phone" name="phone" 
+                          placeholder="(123) 456-7890"
+                          style="width:100%; padding:12px; font-size:12pt; border:1px solid #ccc; border-radius:4px; box-sizing: border-box;">
+                      </div>
+
+                      <!-- Message -->
+                      <div style="margin-bottom: 20px;">
+                        <label for="message"><b>Message</b></label><br>
+                        <textarea id="message" name="message" maxlength="180" 
+                          placeholder="Tell us about yourself and why you're interested in joining BVC..."
+                          style="width:100%; padding:12px; font-size:12pt; height:120px; border:1px solid #ccc; border-radius:4px; box-sizing: border-box; resize: vertical;"></textarea>
+                        <div style="text-align: right; font-size: 10pt; color: #666; margin-top: 5px;">
+                          <span id="char-count">0</span> / 180
+                        </div>
+                      </div>
+
+                      <!-- Resume Upload -->
+                      <div style="margin-bottom: 30px;">
+                        <label for="resume"><b>Upload Resume</b></label><br>
+                        <div style="margin-top: 8px;">
+                          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" 
+                            style="padding:8px; font-size:12pt; border:1px solid #ccc; border-radius:4px; width:100%; box-sizing: border-box;">
+                          <div style="font-size: 10pt; color: #666; margin-top: 5px;">
+                            Accepted formats: PDF, DOC, DOCX (Max 10MB)
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Submit Button -->
+                      <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 14pt;">
+                          Submit Application
+                        </button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <script>
+          // Character counter for message field
+          document.getElementById('message').addEventListener('input', function() {
+            const message = this.value;
+            const charCount = document.getElementById('char-count');
+            charCount.textContent = message.length;
+            
+            if (message.length >= 180) {
+              charCount.style.color = 'red';
+            } else {
+              charCount.style.color = '#666';
+            }
+          });
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-brand-text">BVC</span>
+                    <p class="footer-tagline">Strategic consulting and asset management</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy" class="footer-link">Privacy Policy</a>
+                    <a href="#terms" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BVC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
