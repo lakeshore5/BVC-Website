@@ -934,6 +934,60 @@ a.service-card-link:active {
     text-decoration: none !important;
 }
 
+/* Nuclear option - override ALL link styling on service cards */
+.services-grid a,
+.services-grid a:hover,
+.services-grid a:visited,
+.services-grid a:active,
+.services-grid a:focus {
+    text-decoration: none !important;
+    color: inherit !important;
+    border-bottom: none !important;
+    text-underline-offset: none !important;
+    text-decoration-line: none !important;
+    text-decoration-style: none !important;
+    text-decoration-color: transparent !important;
+    -webkit-text-decoration-line: none !important;
+    -webkit-text-decoration-style: none !important;
+    -webkit-text-decoration-color: transparent !important;
+}
+
+/* Disable all transitions when clicking service cards */
+.services-grid a:active,
+.services-grid a:active .service-card,
+.services-grid a:active .service-card *,
+.services-grid a:focus,
+.services-grid a:focus .service-card,
+.services-grid a:focus .service-card * {
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    -o-animation: none !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+/* Remove focus outline/border when clicking service cards */
+.services-grid a:focus,
+.services-grid a:active,
+.services-grid a:focus .service-card,
+.services-grid a:active .service-card {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
 /* ===== CLICKABLE SERVICE CARDS ===== */
 .service-card-link {
     text-decoration: none;
