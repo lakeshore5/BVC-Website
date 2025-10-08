@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Test - BVC</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div style="max-width: 500px; margin: 50px auto; padding: 20px;">
+        <h2>Simple Form Test</h2>
+        <p>This is a test form to verify FormSubmit is working</p>
+        
+        <form action="https://formsubmit.co/markusjseymour5@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="FORM TEST - BVC Website">
+            <input type="hidden" name="_next" value="https://lakeshore5.github.io/BVC-Website/pages/thank-you.html">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div style="margin-bottom: 15px;">
+                <label>Name:</label><br>
+                <input type="text" name="name" required style="width: 100%; padding: 8px;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label>Email:</label><br>
+                <input type="email" name="email" required style="width: 100%; padding: 8px;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label>Message:</label><br>
+                <textarea name="message" required style="width: 100%; padding: 8px; height: 80px;"></textarea>
+            </div>
+            
+            <button type="submit" style="background: #2563eb; color: white; padding: 10px 20px; border: none; border-radius: 4px;">
+                Send Test
+            </button>
+        </form>
+        
+        <p style="margin-top: 20px; font-size: 14px; color: #666;">
+            <a href="../index.html">← Back to website</a>
+        </p>
+    </div>
+</body>
+</html>
