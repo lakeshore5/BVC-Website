@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Wait a bit for shared elements to load, then initialize page-specific functionality
     setTimeout(() => {
         createIntersectionObserver();
-        initFormHandling();
+        // initFormHandling(); // Temporarily disabled to test form submission
         initThemeToggle();
         initAccessibility();
         
