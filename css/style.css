@@ -896,6 +896,24 @@ body {
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4) !important;
 }
 
+/* ===== CLICKABLE SERVICE CARDS ===== */
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-4px);
+}
+
+.service-card-link:visited {
+    color: inherit;
+}
+
 /* ===== ASSET MANAGEMENT PAGE SPECIFIC STYLES ===== */
 .asset-management-services-grid {
     display: flex;
