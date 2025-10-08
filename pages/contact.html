@@ -37,6 +37,10 @@
                           method="POST" 
                           style="font-family: Arial, sans-serif; font-size: 12pt; color: black; max-width: 1300px; margin: auto; margin-left: 0%;"
                         >
+                          <!-- FormSubmit Configuration -->
+                          <input type="hidden" name="_subject" value="New Contact Form Submission - BVC">
+                          <input type="hidden" name="_next" value="https://lakeshore5.github.io/BVC-Website/pages/thank-you.html">
+                          <input type="hidden" name="_captcha" value="false">
                           <style>
                             .checkbox-group {
                               max-width: 100%;
@@ -131,9 +135,6 @@
                             <textarea id="message" name="message" required 
                               style="width:100%; padding:12px; font-size:12pt; height:150px; border:1px solid #ccc; border-radius:4px; box-sizing: border-box; resize: vertical;"></textarea>
                           </div>
-
-                          <!-- Redirect -->
-                          <input type="hidden" name="_next" value="https://www.dev.telorics@gmail.com/thanks">
 
                           <!-- Submit Button -->
                           <div style="text-align: center; margin-top: 25px;">
