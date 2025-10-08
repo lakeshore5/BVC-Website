@@ -896,6 +896,30 @@ body {
     box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4) !important;
 }
 
+/* ===== SERVICE CARD LINKS ===== */
+.service-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+}
+
+.service-card-link:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.service-card-link:visited {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.service-card-link:focus {
+    text-decoration: none !important;
+    color: inherit !important;
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 /* ===== CLICKABLE SERVICE CARDS ===== */
 .service-card-link {
     text-decoration: none;
