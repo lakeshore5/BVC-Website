@@ -1,0 +1,5 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="40" rx="8" fill="#2563eb"/>
+  <text x="20" y="25" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="white">BVC</text>
+  <circle cx="100" cy="20" r="8" fill="white" fill-opacity="0.2"/>
+</svg>

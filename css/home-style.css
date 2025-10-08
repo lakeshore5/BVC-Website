@@ -12,7 +12,7 @@
 
 /* ===== HOMEPAGE HERO ALIGNMENT ===== */
 .hero-content {
-    text-align: left !important; /* Left-align for homepage only */
+    text-align: center !important; /* Center-align for homepage */
 }
 
 /* ===== LARGER FONTS FOR HOMEPAGE HERO ===== */
