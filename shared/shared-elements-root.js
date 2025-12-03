@@ -9,8 +9,7 @@ class SharedElementsLoader {
         <!-- Logo/Brand -->
         <div class="nav-brand">
             <a href="index.html" class="brand-link">
-                <img src="images/BVC.png" alt="BVC Logo" class="brand-logo" id="brand-logo">
-                <span class="brand-text">BVC</span>
+                <img src="images/BVCLogo.jpg" alt="BVC Logo" class="brand-logo-img">
             </a>
         </div>
 
@@ -20,16 +19,13 @@ class SharedElementsLoader {
                 <a href="pages/consulting.html" class="nav-link">Consulting</a>
             </li>
             <li class="nav-item">
-                <a href="pages/asset-management.html" class="nav-link">Asset Management</a>
+                <a href="pages/private-equity.html" class="nav-link">Private Equity</a>
             </li>
             <li class="nav-item">
                 <a href="pages/about-us.html" class="nav-link">About Us</a>
             </li>
             <li class="nav-item">
                 <a href="pages/contact.html" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a href="pages/career.html" class="nav-link">Career</a>
             </li>
         </ul>
 
@@ -46,8 +42,8 @@ class SharedElementsLoader {
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
         <div class="sidebar-brand">
-            <a href="index.html" class="brand-link" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
-                <img src="images/BVC.png" alt="BVC Logo" class="sidebar-logo" id="sidebar-logo">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="images/BVCLogo.jpg" alt="BVC Logo" class="sidebar-logo-img">
             </a>
         </div>
         <button class="sidebar-close" id="sidebar-close">
@@ -57,14 +53,14 @@ class SharedElementsLoader {
     <ul class="sidebar-menu">
         <li class="sidebar-item">
             <a href="pages/consulting.html" class="sidebar-link">
-                <i class="fas fa-lightbulb"></i>
+                <i class="fas fa-fire"></i>
                 <span>Consulting</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a href="pages/asset-management.html" class="sidebar-link">
-                <i class="fas fa-chart-line"></i>
-                <span>Asset Management</span>
+            <a href="pages/private-equity.html" class="sidebar-link">
+                <i class="fas fa-crown"></i>
+                <span>Private Equity</span>
             </a>
         </li>
         <li class="sidebar-item">
@@ -77,12 +73,6 @@ class SharedElementsLoader {
             <a href="pages/contact.html" class="sidebar-link">
                 <i class="fas fa-envelope"></i>
                 <span>Contact</span>
-            </a>
-        </li>
-        <li class="sidebar-item">
-            <a href="pages/career.html" class="sidebar-link">
-                <i class="fas fa-briefcase"></i>
-                <span>Career</span>
             </a>
         </li>
     </ul>
@@ -253,9 +243,13 @@ class SharedElementsLoader {
 
         window.addEventListener('scroll', handleScroll, { passive: true });
 
-        // Active link highlighting for same-page anchors
+        // Active link highlighting for hash navigation (only for single-page sections)
+        // Don't interfere with page-based navigation
         const updateActiveLink = () => {
+            // Only update if we're on a page with hash navigation (sections with IDs)
             const sections = document.querySelectorAll('section[id]');
+            if (sections.length === 0) return; // Skip if no sections with IDs
+            
             const scrollPos = window.scrollY + (navbar?.offsetHeight || 140) + 50;
             
             let current = '';
@@ -269,10 +263,14 @@ class SharedElementsLoader {
                 }
             });
             
+            // Only update links that use hash navigation
             navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    link.classList.remove('active');
+                    if (href === `#${current}`) {
+                        link.classList.add('active');
+                    }
                 }
             });
         };
